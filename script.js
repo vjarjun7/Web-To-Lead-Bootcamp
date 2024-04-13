@@ -10,7 +10,7 @@ function beforesubmit(event) {
     outputDate.value = formattedDateValue;
   } else {
     alert("Please check the Captcha.");
-    event.PreventDefault();
+    event.preventDefault();
   }
 }
 
