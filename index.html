@@ -8,12 +8,18 @@
   </head>
   <body>
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <h1>Create Lead</h1>
     <form
       action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DIU000002sKIB"
       method="POST"
       onsubmit="beforesubmit()"
     >
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"WebToLeadContact","fallback":"true","orgId":"00DIU000002sKIB","ts":""}'
+      />
       <input type="hidden" name="oid" value="00DIU000002sKIB" />
       <input
         type="hidden"
@@ -71,6 +77,10 @@
       ><br /> -->
 
       <input type="submit" name="submit" class="submit" />
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LeQyrkpAAAAABb4GjrjNYjUL6h5EXL1umlu0ghE"
+      ></div>
     </form>
   </body>
 </html>
